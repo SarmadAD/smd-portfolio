@@ -3,6 +3,11 @@ import Animations from "../../utils/Animations";
 import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utils/ScrollService";
 import "./Resume.css";
+import education from "../../assets/Resume/education.svg";
+import interests from "../../assets/Resume/interests.svg";
+import programming from "../../assets/Resume/programming-skills.svg";
+import projects from "../../assets/Resume/projects.svg";
+import work from "../../assets/Resume/work-history.svg";
 
 interface Props {
   id: any;
@@ -126,11 +131,11 @@ export default function Resume({ id }: Props) {
   ];
 
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Education", logoSrc: education },
+    { label: "Work History", logoSrc: work },
+    { label: "Programming Skills", logoSrc: programming },
+    { label: "Projects", logoSrc: projects },
+    { label: "Interests", logoSrc: interests },
   ];
 
   const handleCarousal = (index: any) => {
@@ -143,12 +148,12 @@ export default function Resume({ id }: Props) {
   };
 
   const getBullets = () => {
-    return resumeBullets.map((bullet, index) => (
-      <div onClick={() => handleCarousal(index)} className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"} key={index}>
-        <img className="bullet-logo" src={require(`../../assets/Resume/${bullet.logoSrc}`)} alt="no connection" />
+    return resumeBullets.map((bullet, index) => {
+      return (<div onClick={() => handleCarousal(index)} className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"} key={index}>
+        <img className="bullet-logo" src={bullet.logoSrc} alt="no connection" />
         <span className="bullet-label">{bullet.label}</span>
-      </div>
-    ));
+      </div>)
+    });
   };
 
   const getResumeScreen = () => {

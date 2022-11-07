@@ -1,4 +1,3 @@
-import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -6,6 +5,9 @@ import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utils/ScrollService";
 import Animations from "../../utils/Animations";
 import "./Testimonial.css";
+import lady from "../../../src/img/Testimonial/lady.png";
+import mike from "../../../src/img/Testimonial/mike.png";
+import man from "../../../src/img/Testimonial/man.png";
 
 interface Props {
   id: any;
@@ -74,7 +76,7 @@ export default function Testimonial({ id }: Props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src="img/testimonial/lady.png" alt="no internet con" />
+                    <img src={lady} alt="no internet con" />
                     <h5>Daisy Dominic</h5>
                     <p>CEO InansGlobal</p>
                   </div>
@@ -107,7 +109,7 @@ export default function Testimonial({ id }: Props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src="img/testimonial/daisy.jpg" alt="no internet con" />
+                    <img src={lady} alt="no internet con" />
                     <h5>Daisy Dominic</h5>
                     <p>CEO InansGlobal</p>
                   </div>
@@ -140,7 +142,7 @@ export default function Testimonial({ id }: Props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src="img/testimonial/mike.png" alt="no internet con" />
+                    <img src={mike} alt="no internet con" />
                     <h5>Mike Dominic</h5>
                     <p>CEO InansGlobal</p>
                   </div>
@@ -173,7 +175,7 @@ export default function Testimonial({ id }: Props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src="img/testimonial/ehiz.jpg" alt="no internet con" />
+                    <img src={man} alt="no internet con" />
                     <h5>Ehiz Dominic</h5>
                     <p>CEO InansGlobal</p>
                   </div>
